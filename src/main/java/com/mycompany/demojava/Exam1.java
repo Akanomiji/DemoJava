@@ -4,6 +4,8 @@
  */
 package com.mycompany.demojava;
 
+import java.util.Scanner;
+
 /**
  *
  * @author com4936
@@ -19,6 +21,7 @@ public class Exam1 {
         // TODO code application logic here
         getTextNumber();
         
+        getNumberOfMonth ();
        
         
         
@@ -65,7 +68,28 @@ public class Exam1 {
     public static void getDayName() 
     {
         int day=1;
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Enter day: ");
+        day=scan.nextInt();
+        System.out.println("day = "+day);
         
+        switch(day){
+            case 1:System.out.print("Monday"); break;
+            case 2:System.out.print("Tuesday");break;
+            case 3:System.out.print("Wednesday");break;
+            case 4:System.out.print("Thursday");break;
+            case 5:System.out.print("Friday");break;
+            case 6:System.out.print("Saturday");break;
+            case 7:System.out.print("Sunday");break;
+            default:System.out.print("Invalid"); break;
+        }
+        
+        
+        
+        
+        
+        
+        /*
         if (day==1) {System.out.print("Monday");}
         else if (day==2) {System.out.print("Tuesday");}
         else if (day==3) {System.out.print("Wednesday");}
@@ -74,11 +98,33 @@ public class Exam1 {
         else if (day==6) {System.out.print("Saturday");}
         else if (day==7) {System.out.print("Sunday");}
         else {System.out.print("Invalid");}
+        */
     }
     
     public static void getMonthName () { 
         int month=1;
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Enter month: ");
+        month=scan.nextInt();
+        System.out.println("month = "+month);
         
+        switch(month) { 
+            case 1:System.out.print("January");break;
+            case 2:System.out.print("February");break;
+            case 3:System.out.print("March");break;
+            case 4:System.out.print("April");break;
+            case 5:System.out.print("May");break;
+            case 6:System.out.print("June");break;
+            case 7:System.out.print("July");break;
+            case 8:System.out.print("August");break;
+            case 9:System.out.print("September");break;
+            case 10:System.out.print("October");break;
+            case 11:System.out.print("November");break;
+            case 12:System.out.print("December");break;
+            default:System.out.print("Invalid"); break;
+        }
+        
+        /*
         if (month==1) {System.out.print("January");}
         else if (month==2) {System.out.print("February");}
         else if (month==3) {System.out.print("March");}
@@ -92,17 +138,40 @@ public class Exam1 {
         else if (month==11) {System.out.print("November");}
         else if (month==12) {System.out.print("December");}
         else { System.out.print("Invalid"); }
+        */
     }
     
     public static void getNumberOfMonth () { 
         int month=1;
         int years=2024;
+        Scanner scanY=new Scanner(System.in);
+        System.out.print("Enter years: ");
+        years=scanY.nextInt();
+        System.out.println("years = "+years);
+        Scanner scanM=new Scanner(System.in);
+        System.out.print("Enter month: ");
+        month=scanM.nextInt();
+        System.out.println("month = "+month);
         
+        
+        switch(month){ 
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:System.out.println("31 days"); break;
+            case 4: case 6: case 9: case 11:System.out.println("30 days"); break;
+            case 2: if (years %4 == 0) 
+            { System.out.print("February = 29 Days"); }
+            else { System.out.print("February = 28 Days");} break;
+            default:System.out.print("Invalid"); break;
+        }
+        
+        
+        
+        
+        /*
         if (month==1) {System.out.print("January = 31 Days");}
         else if (month==2) {
             if (years %4 == 0) 
             { System.out.print("February = 29 Days"); }
-            else { System.out.print("February = 29 Days"); }
+            else { System.out.print("February = 28 Days"); }
         }
         else if (month==3) {System.out.print("March = 31 Days");}
         else if (month==4) {System.out.print("April = 30 Days");}
@@ -114,6 +183,7 @@ public class Exam1 {
         else if (month==10) {System.out.print("October = 31 Days");}
         else if (month==11) {System.out.print("November = 30 Days");}
         else if (month==12) {System.out.print("December = 31 Days");}
+        */
         
     }
     
