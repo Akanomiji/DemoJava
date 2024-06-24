@@ -19,10 +19,9 @@ public class Exam1 {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        getTextNumber();
-        
-        getNumberOfMonth ();
-       
+        //getTextNumber();
+        //getNumberOfMonth ();
+        getDayName(2);
         
         
         
@@ -65,13 +64,16 @@ public class Exam1 {
          }
     
     
-    public static void getDayName() 
+    public static void getDayName(int day) 
     {
+        /*
         int day=1;
         Scanner scan=new Scanner(System.in);
         System.out.print("Enter day: ");
         day=scan.nextInt();
         System.out.println("day = "+day);
+        */
+        
         
         switch(day){
             case 1:System.out.print("Monday"); break;
@@ -186,5 +188,7 @@ public class Exam1 {
         */
         
     }
+
+    
     
 }
