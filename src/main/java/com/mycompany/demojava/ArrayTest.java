@@ -21,12 +21,24 @@ public class ArrayTest {
     
     public static int amountNumber(int x) {
         int[] number={1,2,3,5,2,2,1,1,3,4,2,3,1,5,4,1,2,3,2,1,5,4,1,2,3,2,1,2,2,2,2};
-        int c=0;
-        if (x>=0) {
-            return number[x-1];
+        int c=number[0];
+        for(int i = 0;i <= number.length-1;i++)
+        {
+            if(number[i] < c)
+                c = number[i];
         }
-        System.out.println();
         return c;
+    }
+    
+    public static String receiveNumber(int num1,int num2,int num3,int num4,int num5)
+    {
+        int[] number = {num1,num2,num3,num4,num5};
+        String st = "";
+        for(int i = 0;i <= number.length-1;i++)
+        {
+            st += number[i] + " ";
+        }
+        return st;
     }
     
 }
