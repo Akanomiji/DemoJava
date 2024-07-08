@@ -26,7 +26,7 @@ public class ArrayTest {
         //showData(number);
         for (int i=1; i <=5; i++) {
             //i++;
-            System.out.println(percentOfFrequency(number,i););
+            System.out.printf("No.%d: %.2f%%\n", i , percentOfFrequency(number,i));
         }
         
         
@@ -82,22 +82,35 @@ public class ArrayTest {
         //System.out.println(x+" ");
     }
     
-    public static float percentOfFrequency(int[] x,i) {
-        
+    public static float percentOfFrequency(int[] x, int y) {
+        int count =0;
         //float[] y={0,0,0,0,0};
-        for (int i=0; i < x.length; i++){
-            c[x[i]-1]++;
+        for (int i=0; i< x.length;i++){
+            if (x[i] == y) {
+                count++;
+            }
         }
-        return c;
+        return ((float)count/x.length)*100;
     }
     
-    public static int[] getMax(int[] precent) {
-        
-        return null;
+    public static int[] getMax(int[] present) {
+        int max = present[0];
+        for (int i = 1; i < present.length; i++) {
+            if (present[i] > max) {
+                max = present[i];
+            }
+        }
+        return new int[]{max};
     }
     
-    public static int[] getMin(int[] precent) {
-        return null;
+    public static int[] getMin(int[] present) {
+        int min = present[0];
+        for (int i = 1; i < present.length; i++) {
+            if (present[i] < min) {
+                min = present[i];
+            }
+        }
+        return new int[]{min};
     }
     
 }
